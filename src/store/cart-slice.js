@@ -58,7 +58,7 @@ export const sendCartData = (cart) => {
 
         const sendCartData = async () => {
 
-            const response = await fetch('firebase_uri', {
+            const response = await fetch(FIREBASE_URI, {
                 method: "PUT",
                 body: JSON.stringify(cart)
             })
@@ -90,7 +90,7 @@ export const fetchCartData = () => {
 
         const fetchData = async () => {
 
-            const response = await fetch(`firebase_uri`)
+            const response = await fetch(FIREBASE_URI)
 
             if (!response.ok) {
                 throw new Error('fetching cart Data failed')
